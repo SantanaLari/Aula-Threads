@@ -15,6 +15,14 @@ public class ThreadCalc extends Thread{
 	}
 	
 	private void calc() {
+		int tempo = 1000;
+		try {
+			sleep(op * tempo);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		int res = 0;
 		String operacao = "";
 		switch(op) {
